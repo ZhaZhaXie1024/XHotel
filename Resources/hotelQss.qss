@@ -1,0 +1,546 @@
+/*----禁用后的样式-----*/
+QLineEdit:!enabled,QDateEdit:!enabled,QComboBox:!enabled
+{
+    border:2px dashed #e2e2e2;
+    color:#607d8b;
+}
+
+/*----QLineEdit----*/
+QLineEdit
+{
+    min-height:30px;
+    border:1px solid #cccccc;
+    border-radius:3px;
+}
+
+QLineEdit:hover,QLineEdit:focus
+{
+    border:1px solid #618BE5;
+}
+
+
+/*----QPushButton----*/
+
+QPushButton
+{
+    min-width:70px;
+    min-height:34px;
+    background:#ffffff;
+    border:1px solid #cccccc;
+    border-radius:2px;
+}
+
+QPushButton:hover
+{
+    border:1px solid #618BE5;
+    color:#618BE5;
+}
+
+QPushButton:pressed
+{
+    border:1px solid #ffc107;
+    color:#ffc107;
+}
+
+QPushButton:!enabled
+{
+    border:1px solid #e2e2e2;
+    color:#607d8b;
+}
+
+/*----QDialog----*/
+
+QDialog
+{
+    background-color:#ffffff;
+    min-width:400px;
+}
+
+/*---QTreeWidget-----*/
+
+QTreeWidget
+{
+    border-bottom:none;
+    border-right:none;
+    border-radius:4px;
+    border-top:1px solid #cccccc;
+    border-left:1px solid #cccccc;
+}
+
+QTreeWidget::item
+{
+    height:58px;
+    font-size:44px;
+    margin:0px;
+}
+
+QTreeWidget::item:hover
+{
+    background:rgba(97,139,229,0.2);
+}
+
+QTreeWidget::item:selected
+{
+    border-top:1px solid #cccccc;
+    border-bottom:1px solid #cccccc;
+    background-color:transparent;
+    color:#618BE5;
+}
+
+/*  ----设置QTreeView/QTreeWidget的打开和关闭小图标---- */
+/*QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings
+{
+    image: url(:res/recoverydata/icon/icon_list_2.png);
+}*/
+
+/*QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings
+{
+    image: url(:res/recoverydata/icon/icon_list_1.png);
+}*/
+
+/*--------QScrollBar-----------*/
+
+/*水平*/
+QScrollBar::horizontal
+{
+    height:4px;
+    background:rgba(0,0,0,0%);
+    margin:0px,0px,0px,0px;
+}
+
+QScrollBar::handle:horizontal
+{
+    min-width:10px;
+    background:rgba(0,0,0,25%);
+    border-radius:2px;
+    height:4px;
+}
+QScrollBar::handle:horizontal:hover
+{
+    height:4px;
+    background:rgba(0,0,0,50%);
+    border-radius:2px;
+    min-width:10px;
+}
+
+/*垂直*/
+QScrollBar::vertical
+{
+    width:4px;
+    background:rgba(0,0,0,0%);
+    margin:0px,0px,0px,0px;
+    /*padding-top:9px;
+    padding-bottom:9px;*/
+}
+QScrollBar::handle:vertical
+{
+    width:4px;
+    background:rgba(0,0,0,25%);
+    border-radius:2px;
+    min-height:20px;
+}
+QScrollBar::handle:vertical:hover
+{
+    width:4px;
+    background:rgba(0,0,0,50%);
+    border-radius:2px;
+    min-height:20px;
+}
+
+/*通用*/
+QScrollBar::add-line
+{
+    height:0px;width:0px;
+}
+QScrollBar::sub-line
+{
+    height:0px;width:0px;
+}
+
+QScrollBar::add-page,QScrollBar::sub-page
+{
+    background:rgba(0,0,0,10%);
+    border-radius:2px;
+}
+
+/*
+    -----QTableView,QTableWidget----
+*/
+QTableView,QTableWidget
+{
+    border:1px solid #cccccc;
+    outline:0px;
+}
+
+QTableView:item,QTableWidget:item
+{
+    font-family:"Microsoft YaHei";
+    outline:0px;
+}
+
+QTableView:item:selected,QTableWidget:item:selected
+{
+    background:rgba(255,209,143,0.5);
+    color:#618BE8;
+    outline:0px;
+}
+
+QTableView QHeaderView::section,QTableWidget QHeaderView::section
+{
+    font-size:14px;
+    font-family:"Microsoft YaHei";
+
+    background:rgba(244,244,244,0.6);
+    border:none;
+
+    min-height:40px;
+    outline:0px;
+}
+
+
+/*----QMessageBox----*/
+
+QMessageBox
+{
+    background-color:#ffffff;
+    min-width:200px;
+    min-height:180px;
+}
+
+QMessageBox QLabel
+{
+    margin-top:14px;
+    font-size:16px;
+}
+
+
+/*QComboBox*/
+QComboBox
+{
+    min-height:30px;
+    min-width:100px;
+    background:#ffffff;
+    border:1px solid #cccccc;
+}
+
+QComboBox:hover
+{
+    border:1px solid #618BE5;
+}
+
+/*下拉时，下拉框的样式*/
+QComboBox:on {
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+/*下拉icon控件，可调整大小*/
+QComboBox::down-arrow
+{
+    width:14px;
+    height:14px;
+    image:url(:/images/down_arrow.png);
+}
+
+QComboBox::drop-down
+{
+    outline:0px;
+    margin-right:10px;
+    border:none;
+}
+
+QComboBox::down-arrow:hover
+{
+    image:url(:/images/down_arrow_hover.png);
+}
+
+QComboBox QAbstractItemView {
+    outline: 0px;
+    selection-background-color: #618BE5;
+}
+
+/*每一项的高度 设置 setView()   combo->setView(new QListView());   后生效*/
+QComboBox QAbstractItemView::item {
+    min-height:30px;
+    selection-background-color: #618BE5;
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color: #618BE5;
+}
+
+
+/*----QTabWidget----*/
+QTabWidget QTabBar::tab
+{
+    min-width:104px;
+    height:40px;
+}
+
+QTabWidget QTabBar::tab:selected, QTableWidget QTabBar::tab:hover
+{
+    color:#618BE5;
+    font-family:"微软雅黑";
+}
+
+QTabWidget QTabBar::close-button:hover
+{
+    image:url(:/images/closeBtnhover.png);
+}
+
+QTabWidget QTabBar::close-button
+{
+    image:url(:/images/closeBtn.png);
+}
+
+/*----QDateEdit----*/
+QDateEdit{
+    min-height:34px;
+    border:1px solid #cccccc;
+    border-radius:2px;
+}
+
+QDateEdit:hover{
+    border:1px solid #618BE5;
+}
+
+QDateEdit::down-arrow
+{
+    width:14px;
+    height:14px;
+    image:url(:/images/down_arrow.png);
+}
+
+QDateEdit::drop-down
+{
+    margin-right:10px;
+    border:none;
+    background:transparent;
+}
+
+QCalendarWidget QTableView
+{
+    /*第几周 的背景颜色*/
+    alternate-background-color: rgb(255, 255, 255);
+    /*整个背景颜色*/
+/*    background-color: #ffffff;*/
+}
+
+/*显示月份和年份所在的导航,//这个一般设置渐变色比较多，可以自行修改*/
+QCalendarWidget QWidget#qt_calendar_navigationbar{
+/*    background-color: rgba(244,244,244,1);*/
+    height:34px;
+    background-color:#ffffff;
+    border-top:1px solid #cccccc;
+    border-left:1px solid #cccccc;
+    border-right:1px solid #cccccc;
+}
+
+/*  QCalendarWidget 中的年份按钮，按下后出现的spinbox */
+QCalendarWidget QSpinBox
+{
+    min-height:20px;
+    border:1px solid #cccccc;
+    border-radius:3px;
+}
+
+QCalendarWidget QSpinBox::up-button
+{
+    width:0px;
+    height:0px;
+    image:none;
+}
+
+QCalendarWidget QSpinBox::down-button
+{
+    width:0px;
+    height:0px;
+    image:none;
+}
+
+
+
+/*导航栏中的 年份和月份*/
+QToolButton#qt_calendar_monthbutton,#qt_calendar_yearbutton{
+    color: #333333;
+}
+
+QToolButton#qt_calendar_monthbutton:hover,#qt_calendar_yearbutton:hover{
+    color: #618BE5;
+}
+
+/*改变左右icon*/
+QToolButton#qt_calendar_prevmonth{
+    qproperty-icon:url(:/images/left_arrows.png);
+}
+
+QToolButton#qt_calendar_nextmonth{
+    qproperty-icon:url(:/images/right_arrows.png);
+}
+
+
+/*----QSpinBox----*/
+QSpinBox
+{
+    min-height:30px;
+    border:1px solid #cccccc;
+    border-radius:3px;
+}
+
+QSpinBox::up-button
+{
+    width:10px;
+    image: url(:/images/up_arrow.png);
+    padding-left:8px;
+    padding-right:8px;
+    border-left:1px solid #cccccc;
+}
+
+QSpinBox::down-button
+{
+    width:10px;
+    image: url(:/images/down_arrow.png);
+    padding-left:8px;
+    padding-right:8px;
+    border-top:1px dashed #cccccc;
+    border-left:1px solid #cccccc;
+}
+
+QSpinBox::up-button:hover
+{
+    image: url(:/images/up_arrow_hover.png);
+    border-left:1px solid #618BE5;
+    border-bottom:1px dashed #618BE5;
+}
+
+QSpinBox::down-button:hover
+{
+    image: url(:/images/down_arrow_hover.png);
+    border-top:1px dashed #618BE5;
+    border-left:1px solid #618BE5;
+}
+
+
+/*----QMenu和QAction----*/
+QMenu
+{
+    background:#ffffff;
+    margin: 2px;
+}
+
+QMenu::item
+{
+    background-color: transparent;
+    border: 1px solid transparent;
+    min-height:30px;
+    min-width:80px;
+    padding-left:20px;
+}
+
+QMenu::item:selected
+{
+    background-color:#618BE5;
+    color:#ffffff;
+}
+
+QMenu::icon
+{
+    padding-left:5px;
+}
+
+
+/*----header特有----*/
+/* 头部的按钮将他的背景颜色和边框去掉 */
+QWidget#HeaderWidget QPushButton
+{
+    background:transparent;
+    border:none;
+}
+
+/*将 header 的 QMessageBox 中的按钮添加边框,因为受到乐上面样式的影响*/
+QWidget#HeaderWidget QMessageBox QPushButton
+{
+    border:1px solid #cccccc;
+}
+
+QWidget#HeaderWidget QMessageBox QPushButton:hover
+{
+    border:1px solid #618BE5;
+}
+
+
+/*-------Room中的刷新按钮  特定--------*/
+/*QWidget#Room QPushButton#btn_refresh{
+    min-width:18px;
+    min-height:18px;
+    qproperty-icon: url(":/images/refresh.png");
+    qproperty-iconSize: 16px 16px;
+    border:none;
+}
+
+QWidget#Room QPushButton#btn_refresh:hover{
+    qproperty-icon: url("");
+    qproperty-iconSize: 18px 18px;
+    border:1px solid #cccccc;
+}*/
+
+/*-------房间拥有的属性（特有部分）-------*/
+QWidget#RoomOwnAttribute QPushButton#btn_add,QWidget#RoomOwnAttribute QPushButton#btn_remove
+{
+    min-width:60px;
+    min-height:34px;
+}
+
+
+QWidget#RoomOwnAttribute QTableWidget#tablewidget,QWidget#RoomOwnAttribute QTableWidget#own_tablewidget,QWidget#RoomOwnAttribute QTableView#room_tableview
+{
+    border-top:none;
+    border-left:1px solid #cccccc;
+    border-bottom:none;
+    border-right:none;
+}
+
+/*----房态中 颜色的toolbutton设置样式----*/
+QWidget#RoomStateMap QToolButton
+{
+    border:none;
+}
+
+QWidget#RoomStateMap QToolButton::menu-indicator {
+    image: none;
+}
+
+/*-----房态中，item对话框的大小----*/
+QDialog#RoomStateItemDataDialog
+{
+    min-width:200px;
+    border:1px solid #cccccc;
+/*    border-radius:2px;*/
+}
+
+/*-----房态中,被禁用的控件样式----*/
+QDialog#RoomStateItemDataDialog QLineEdit:!enabled
+{
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:1px solid #e2e2e2;
+}
+
+/*----预约中对各个控件的小调整-----*/
+/*QWidget#ReserveRoom QLabel#label
+{
+    max-width:42px;
+}
+
+QWidget#ReserveRoom QLineEdit#edit_name
+{
+    max-width:100px;
+}
+
+QWidget#ReserveRoom QDateEdit#dateEdit
+{
+    min-width:120px;
+}*/
+
+

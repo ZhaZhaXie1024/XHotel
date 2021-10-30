@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>d1.png</file>
+        <file>Logoff.png</file>
+        <file>下拉.png</file>
+        <file>logo.png</file>
+        <file>closeBtn.png</file>
+        <file>loadImg.jpg</file>
+        <file>userImage.png</file>
+        <file>closeBtnhover.png</file>
+        <file>logowhite.png</file>
+        <file>selectRightIcon.png</file>
+        <file>down_arrow.png</file>
+        <file>lineheight.png</file>
+        <file>Logoff_hover.png</file>
+        <file>left_arrows_hover.png</file>
+        <file>refresh.png</file>
+        <file>refresh_hover.png</file>
+        <file>right_arrows_hover.png</file>
+        <file>left_arrows.png</file>
+        <file>right_arrows.png</file>
+        <file>up_arrow.png</file>
+        <file>down_arrow_hover.png</file>
+        <file>up_arrow_hover.png</file>
+        <file>trash.png</file>
+        <file>reserve.png</file>
+        <file>openRoom.png</file>
+        <file>settlement.png</file>
+        <file>detail.png</file>
+    </qresource>
+    <qresource prefix="/qss">
+        <file>hotelQss.qss</file>
+    </qresource>
+</RCC>
